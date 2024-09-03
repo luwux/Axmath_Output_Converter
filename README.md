@@ -1,6 +1,7 @@
+    Warning: This program is created by a newbee, so it might be filled with mistakes and non-standard code.
 
-    Warning: This program is created by a newbee, it could be filled with mistakes and non-standered code.
+For reasons I don't fully understand, when using Axmath to create TeX content, including equations and descriptions, there is no option to copy your content to the clipboard and paste it directly into LaTeX files with proper compilation. If you do, what you get is just a bunch of things squeezed into one displayed equation.
 
-As for some reason I don't know, when using Axmath to create TeX content including equations and descriptions, there's no option for you to copy your content into clipboard and directly paste it into LaTeX files while being compiled well. If you did so, what you get is just a bunch of things squeezed into one displayed equation.
+This is a simple & stupid Python program designed to convert content copied directly from Axmath into a mix of inline and displayed math, depending on what you've written. This allows you to write full paragraphs with text and TeX in Axmath and then use this program to copy and paste those paragraphs into LaTeX documents.
 
-So this is a simple & stupid python program to convert the thing you copied directly from Axmath to the combination of inline math and displayed math, which actually depends on what you wrote. In this way, you can write full paragraphs with words and TeX in Axmath, and then use this program to copy & paste those paragraphs into LaTeX documents.
+To use it, you can employ something like AutoHotKey to set a keyboard shortcut that toggles this program. It will automatically read the latest content in your system clipboard, convert it, and then place the converted content back into the clipboard. Then you can then simply paste it into a LaTeX document or a Markdown document!
