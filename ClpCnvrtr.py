@@ -81,16 +81,21 @@ def convert_latex_single_line(input_str):
         # 检查 \text{ 命令的开始
         if input_str[i : i + 6] == "\\text{" and inkuohao == 0:
             i += 6
+            if inbigkuohao == 1:
+                output.append("\\right.") # 考虑到括号内的文字，给左边的括号配对 
             output.append("$")
             in_latex_text = True
             inlineornot += 1
+
             continue
 
         # 检查 LaTeX 文本模式的结束
         if input_str[i] == "}" and in_latex_text:
             output.append("$")
+            if inbigkuohao == 1:
+                output.append("\\left.") # 考虑到括号内的文字，给左边的括号配对
             if displaymath == 1 and (autoinline == 0 or inlineornot != 0):
-                output.extend(list("\\displaystyle "))
+                output.extend(list("\\displaystyle ")) # 按情况添加 \displaystyle 
             in_latex_text = False
             i += 1
             continue
